@@ -11,7 +11,7 @@ sampleInfo    <- data[[1]]$`Sample metadata`
 junctionQuant <- data[[1]]$`Junction quantification`
 geneExpr      <- data[[1]]$`Gene expression`
 
-# Filter and normalise gene expression -----------------------------------------
+# Filter and normalise gene expression data ------------------------------------
 plotGeneExprPerSample(geneExpr)
 plotRowStats(geneExpr, "mean", "log10(var)")
 
@@ -334,7 +334,7 @@ fig8 <- plot_grid(fig8a, fig8b, labels=c("a", "b"), nrow=2, rel_heights=c(1, 2),
 saveToTIFF(fig8, "Fig8.tiff", width=10, height=12)
 fig8
 
-# Check correlation and survival based on TCGA data ----------------------------
+# Check correlation based on TCGA data -----------------------------------------
 library(survival)
 panTCGAanalysis <- lapply(names(getFirebrowseCohorts()), function(cohort) {
     try(performCorrAndSurvPerTCGACohort(cohort, CD46_PTC_event_hg19,
@@ -379,7 +379,7 @@ ggsave("Fig10.tiff", dpi=600, height=10, width=12, fig10)
 fig10 <- plot(fig10)
 fig10
 
-# Check survival on TCGA data
+# Check survival on TCGA data --------------------------------------------------
 plotSurvs <- function(item, panTCGAanalysis_clean) {
     surv <- panTCGAanalysis_clean[[item]]$surv
     pval <- panTCGAanalysis_clean[[item]]$pvalue

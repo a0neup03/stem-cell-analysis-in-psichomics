@@ -18,11 +18,12 @@ RNA-binding proteins:
 
 ## File description
 
-* [analysis.R][]: main script using psichomics to perform all the steps of the
-aforementioned pipeline
-* [helper_functions.R][]: auxiliary functions used in the main script
-* [wilcox_ties.R][]: explain the second stratum obtained during the differential
-splicing analysis (Fig5b)
+* [analysis.R](analysis.R): main script using psichomics to perform all the
+steps of the aforementioned pipeline
+* [helper_functions.R](helper_functions.R): auxiliary functions used in the main
+script
+* [wilcox_ties.R](wilcox_ties.R): explain the second stratum obtained during the
+differential splicing analysis (Fig5b)
 
 ## Contact
 

@@ -240,7 +240,7 @@ prepareCorrPlot <- function(type, corr, gene, singlePlot=TRUE) {
         } else {
             p <- p + theme(axis.text=element_text(size=14),
                            plot.title=element_text(size=13),
-                           plot.subtitle=element_text(size=12))
+                           plot.subtitle=element_text(size=11.5))
         }
     }
     return(p)

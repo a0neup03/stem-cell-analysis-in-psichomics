@@ -315,7 +315,7 @@ lapply(names(GTExTissueAnalysis)[-6], function(i)
 
 # Display a higher p-value to make the plot prettier
 GTExTissueAnalysis$Esophagus[[1]]$ESRP2$cor$p.value <- 4e-300
-
+  
 GTExTissueAnalysis_plots_ESRP2 <- lapply(
     names(GTExTissueAnalysis), prepareCorrPlot, GTExTissueAnalysis, "ESRP2",
     singlePlot=FALSE)
@@ -365,7 +365,7 @@ fig9 <- arrangeGrob(
                   gp=gpar(fontface="bold", fontsize=14), rot=90),
     bottom=textGrob("CD46 penultimate exon inclusion (PSI)",
                     gp=gpar(fontface="bold", fontsize=14)))
-ggsave("Fig9.tiff", dpi=600, height=10, width=12, fig9)
+ggsave("Fig9.tiff", dpi=600, height=10, width=12, fig9, compression="lzw")
 plot(fig9)
 
 fig10 <- plot_grid(plotlist=Filter(length, panTCGAanalysis_corr_plots$ESRP2))
@@ -375,7 +375,7 @@ fig10 <- arrangeGrob(
                   gp=gpar(fontface="bold", fontsize=14), rot=90),
     bottom=textGrob("CD46 penultimate exon inclusion (PSI)",
                     gp=gpar(fontface="bold", fontsize=14)))
-ggsave("Fig10.tiff", dpi=600, height=10, width=12, fig10)
+ggsave("Fig10.tiff", dpi=600, height=10, width=12, fig10, compression="lzw")
 fig10 <- plot(fig10)
 fig10
 

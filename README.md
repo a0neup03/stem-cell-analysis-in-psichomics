@@ -1,8 +1,14 @@
 # Analysing isogenic human stem cells vs fibroblasts using psichomics
 
+This project contains the code for the analysis performed in the following
+book chapter:
+
+> Nuno Saraiva-Agostinho and Nuno L. Barbosa-Morais (2020). 
+**[Interactive Alternative Splicing Analysis of Human Stem Cells Using psichomics][chapter]**. In: Kidder B. (eds) Stem Cell Transcriptional Networks. *Methods in Molecular Biology*, vol 2117. Humana, New York, NY
+
 ## Pipeline
 
-1. [SRP063867][] loading containing biological data for human isogenic stem cells
+1. Loading [SRP063867][] data, containing data for human isogenic stem cells
 and fibroblasts
 2. Gene expression data filtering and normalisation
 3. Alternative splicing quantification
@@ -20,14 +26,15 @@ RNA-binding proteins:
 
 | File                                     | Description |
 | ---------------------------------------- | ----------- |
-| [analysis.R](analysis.R)                 | Main script using psichomics to perform all the steps of the aforementioned pipeline |
+| [analysis.R](analysis.R)                 | Main script using psichomics to perform the aforementioned pipeline |
 | [helper_functions.R](helper_functions.R) | Auxiliary functions used in the main script |
 | [wilcox_ties.R](wilcox_ties.R)           | Explanation of the second stratum obtained during the differential splicing analysis (Fig5b) |
 
 ## Contact
 
-For any doubt and issues, contact [nunoagostinho@medicina.ulisboa.pt][mail]
+In case of doubts and issues, please contact [nunoagostinho@medicina.ulisboa.pt][mail]
 
+[chapter]: https://doi.org/10.1007/978-1-0716-0301-7_10
 [SRP063867]: https://trace.ncbi.nlm.nih.gov/Traces/sra/?study=SRP063867
 [TCGA]: https://tcga-data.nci.nih.gov
 [GTEx]: http://www.gtexportal.org
